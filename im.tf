@@ -41,7 +41,7 @@ resource "aws_iam_policy" "tf-cicd-pipeline-policy" {
     policy = data.aws_iam_policy_document.tf-cicd-pipeline-policies.json
 }
 
-resource "aws_iam_role_policy_attachment" "tf-cicd-pipeline-attachement" {
+resource "aws_iam_role_policy_attachment" "tf-cicd-pipeline-attachment" {
     policy_arn = aws_iam_policy.tf-cicd-pipeline-policy.arn
     role = aws_iam_role.tf-codepipeline-role.id
 }
