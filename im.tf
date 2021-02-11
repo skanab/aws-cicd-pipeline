@@ -46,6 +46,7 @@ resource "aws_iam_role_policy_attachment" "tf-cicd-pipeline-attachement" {
     role = aws_iam_role.tf-codepipeline-role.id
 }
 
+
 resource "aws_iam_role" "tf-codebuild-role" {
   name = "tf-codebuild-role"
 
